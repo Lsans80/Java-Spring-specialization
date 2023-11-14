@@ -1,0 +1,2 @@
+
+db.createCollection( 'Comentario', {validator: {$jsonSchema: {bsonType: 'object',title:'Comentario',required: [         'texto',          'Usuario',          'idLikeDislike'],properties: {texto: {bsonType: 'string'},fechaHora: {bsonType: 'timestamp'},Usuario: {bsonType: 'objectId'},idLikeDislike: {bsonType: 'objectId'}}         }      }});  

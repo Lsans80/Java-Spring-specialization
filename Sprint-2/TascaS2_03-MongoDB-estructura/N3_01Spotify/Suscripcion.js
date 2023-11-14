@@ -1,0 +1,2 @@
+
+db.createCollection( 'Suscripcion', {validator: {$jsonSchema: {bsonType: 'object',title:'Suscripcion',required: [         'fechaInicioSuscripcion',          'fechaRenovacionServicio',          'idPago'],properties: {fechaInicioSuscripcion: {bsonType: 'date'},fechaRenovacionServicio: {bsonType: 'date'},idPago: {bsonType: 'objectId'}}         }      }});  

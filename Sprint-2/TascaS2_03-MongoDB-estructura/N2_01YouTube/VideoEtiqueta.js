@@ -1,0 +1,2 @@
+
+db.createCollection( 'VideoEtiqueta', {validator: {$jsonSchema: {bsonType: 'object',title:'VideoEtiqueta',required: [         'idVideo',          'idEtiquteta'],properties: {idVideo: {bsonType: 'objectId'},idEtiquteta: {bsonType: 'objectId'}}         }      }});  

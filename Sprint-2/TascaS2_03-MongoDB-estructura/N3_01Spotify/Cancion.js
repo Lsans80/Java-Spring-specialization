@@ -1,0 +1,2 @@
+
+db.createCollection( 'Cancion', {validator: {$jsonSchema: {bsonType: 'object',title:'Cancion',required: [         'titulo',          'duracion',          'numeroReproducciones',          'Album'],properties: {titulo: {bsonType: 'string'},duracion: {bsonType: 'int'},numeroReproducciones: {bsonType: 'int'},Album: {bsonType: 'objectId'}}         }      }});  

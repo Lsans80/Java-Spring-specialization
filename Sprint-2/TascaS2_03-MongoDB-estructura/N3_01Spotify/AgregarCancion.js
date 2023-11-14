@@ -1,0 +1,2 @@
+
+db.createCollection( 'AgregarCancion', {validator: {$jsonSchema: {bsonType: 'object',title:'AgregarCancion',required: [         'fecha',          'idUsuario',          'idCancion',          'idPlaylist'],properties: {fecha: {bsonType: 'date'},idUsuario: {bsonType: 'objectId'},idCancion: {bsonType: 'objectId'},idPlaylist: {bsonType: 'objectId'}}         }      }});  

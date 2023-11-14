@@ -1,0 +1,2 @@
+
+db.createCollection( 'Tarjeta', {validator: {$jsonSchema: {bsonType: 'object',title:'Tarjeta',required: [         'numeroTarjeta',          'fechaCaducidad',          'codigoSeguridad'],properties: {numeroTarjeta: {bsonType: 'string'},fechaCaducidad: {bsonType: 'string'},codigoSeguridad: {bsonType: 'int'}}         }      }});  

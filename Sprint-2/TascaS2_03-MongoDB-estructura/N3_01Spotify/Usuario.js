@@ -1,0 +1,3 @@
+
+db.createCollection( 'Usuario', {validator: {$jsonSchema: {bsonType: 'object',title:'Usuario',required: [         'email',          'password',          'nombre',          'fechaNacimiento',          'pais',          'freePremium'],properties: {email: {bsonType: 'string'},password: {bsonType: 'string'},nombre: {bsonType: 'string'},fechaNacimiento: {bsonType: 'date'},sexo: {bsonType: 'string'},pais: {bsonType: 'string'},freePremium: {enum: free, premium
+},idSuscripcion: {bsonType: 'objectId'}}         }      }});  

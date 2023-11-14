@@ -1,0 +1,2 @@
+
+db.createCollection( 'Etiquteta', {validator: {$jsonSchema: {bsonType: 'object',title:'Etiquteta',required: [         'nombre',          'fechaHora'],properties: {nombre: {bsonType: 'string'},fechaHora: {bsonType: 'timestamp'}}         }      }});  

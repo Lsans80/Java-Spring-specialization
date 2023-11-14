@@ -1,0 +1,2 @@
+
+db.createCollection( 'SeguirArtista', {validator: {$jsonSchema: {bsonType: 'object',title:'SeguirArtista',required: [         'idArtista'],properties: {idArtista: {bsonType: 'objectId'},idUsuario: {bsonType: 'objectId'}}         }      }});  
