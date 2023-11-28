@@ -2,6 +2,7 @@ package N2_01AbstractFactory.Factory;
 
 import N2_01AbstractFactory.Address.Address;
 import N2_01AbstractFactory.Address.USAddress;
+import N2_01AbstractFactory.Contact;
 import N2_01AbstractFactory.Phone.Phone;
 import N2_01AbstractFactory.Phone.USPhone;
 
@@ -33,5 +34,12 @@ public class USContactFactory implements ContactAbstractFactory{
         String phone = sc.nextLine();
 
         return new USPhone(phone);
+    }
+
+    @Override
+    public Contact createContact(String name, Address address, Phone phone) {
+
+        Contact contact = new Contact(name,address, phone);
+        return contact;
     }
 }

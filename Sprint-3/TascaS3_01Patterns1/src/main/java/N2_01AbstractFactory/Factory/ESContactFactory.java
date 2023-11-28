@@ -2,6 +2,7 @@ package N2_01AbstractFactory.Factory;
 
 import N2_01AbstractFactory.Address.Address;
 import N2_01AbstractFactory.Address.ESAddress;
+import N2_01AbstractFactory.Contact;
 import N2_01AbstractFactory.Phone.ESPhone;
 import N2_01AbstractFactory.Phone.Phone;
 
@@ -35,4 +36,10 @@ public class ESContactFactory implements ContactAbstractFactory{
         return new ESPhone(phone);
     }
 
+    @Override
+    public Contact createContact(String name, Address address, Phone phone) {
+
+        Contact contact = new Contact(name,address, phone);
+        return contact;
+    }
 }

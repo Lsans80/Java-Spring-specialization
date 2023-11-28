@@ -5,22 +5,19 @@ public class Main {
     public static void main(String[] args){
 
         //Instanciamos a traves del metodo static.
-        Undo pedido = Undo.instanciar();
+        Undo comandos = Undo.instanciar();
 
-        pedido.agregarPedido("pedido1");
-        pedido.agregarPedido("pedido2");
-        pedido.agregarPedido("pedido3");
-        pedido.agregarPedido("pedido4");
+        comandos.agregarComando("comando1");
+        comandos.agregarComando("comando2");
+        comandos.agregarComando("comando3");
+        comandos.agregarComando("comando4");
 
-        pedido.listarPedidos();
+        comandos.listarComandos();
         System.out.println();
 
-        pedido.eliminarPedido("pedido3");
-        pedido.listarPedidos();
+        comandos.eliminarUltimoComando();
+        comandos.listarComandos();
         System.out.println();
-
-        pedido.eliminarUltimoPedido();
-        pedido.listarPedidos();
 
     }
 }
