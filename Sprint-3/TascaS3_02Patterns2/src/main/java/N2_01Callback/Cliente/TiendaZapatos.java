@@ -23,7 +23,7 @@ public class TiendaZapatos {
             opcion = sc.nextInt();
             sc.nextLine();
 
-        } while (opcion < 1 && opcion > 3);
+        } while (opcion < 1 || opcion > 3);
 
         switch (opcion){
 
