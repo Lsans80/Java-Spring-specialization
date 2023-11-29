@@ -1,8 +1,6 @@
 package N3_01Command.Parking;
 
-import N3_01Command.Order;
-
-public class Plane implements Order {
+public class Plane implements Vehicle {
     @Override
     public void startUp() {
 

@@ -43,7 +43,7 @@ public class Start {
         final byte MAXIMO = 4;
 
         do{
-            System.out.println("\n*****AGENDA*****");
+            System.out.println("\n*****AGENDA*****\n");
             System.out.println("1. Crear contacto.");
             System.out.println("2. Buscar contacto.");
             System.out.println("3. Eliminar contacto.");
@@ -53,7 +53,7 @@ public class Start {
             sc.nextLine();
 
             if(opcion < MINIMO || opcion > MAXIMO){
-                System.out.println("Escoge una opción válida.");
+                System.err.println("Escoge una opción válida.");
             }
 
         } while(opcion < MINIMO || opcion > MAXIMO);

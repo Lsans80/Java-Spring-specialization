@@ -1,22 +1,35 @@
 package N3_01Command;
+
+import N3_01Command.Orders.Order;
+
 //Invoker class.
 public class OrderVehicle {
 
-    private Order order;
+    private Order startUp;
+    private Order accelerate;
+    private Order slowDown;
 
-    public OrderVehicle(Order order) {
-        this.order = order;
+    public void setStartUp(Order startUp) {
+        this.startUp = startUp;
+    }
+
+    public void setAccelerate(Order accelerate) {
+        this.accelerate = accelerate;
+    }
+
+    public void setSlowDown(Order slowDown) {
+        this.slowDown = slowDown;
     }
 
     public void executeStartUp (){
-        order.startUp();
+        startUp.execute();
     }
 
     public void executeAccelerate (){
-        order.accelerate();
+        accelerate.execute();
     }
 
     public void executeSlowDown (){
-        order.slowDown();
+        slowDown.execute();
     }
 }

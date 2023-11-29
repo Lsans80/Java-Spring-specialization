@@ -1,8 +1,7 @@
 package N3_01Command.Parking;
 
-import N3_01Command.Order;
 //Concrete class implementing the Order interface.
-public class Car implements Order {
+public class Car implements Vehicle {
 
     @Override
     public void startUp() {
