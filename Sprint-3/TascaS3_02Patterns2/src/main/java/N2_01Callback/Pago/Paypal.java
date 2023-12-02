@@ -8,9 +8,9 @@ public class Paypal implements MetodoPago {
         this.userPaypal = userPaypal;
     }
     @Override
-    public void realizarPago() {
+    public void realizarPago(Callback callback) {
 
-        System.out.println("Pago realizado con Paypal.");
+        callback.ejecutar(userPaypal);
 
     }
 

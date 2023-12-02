@@ -8,9 +8,8 @@ public class Cuenta implements MetodoPago {
         this.numeroCuenta = numeroCuenta;
     }
     @Override
-    public void realizarPago() {
+    public void realizarPago(Callback callback) {
 
-        System.out.println("Pago realizado con cargo en cuenta.");
     }
 
     @Override

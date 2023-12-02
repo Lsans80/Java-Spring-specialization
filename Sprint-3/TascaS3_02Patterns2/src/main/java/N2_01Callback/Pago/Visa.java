@@ -8,9 +8,8 @@ public class Visa implements MetodoPago {
         this.numeroTargeta = numeroTargeta;
     }
     @Override
-    public void realizarPago() {
+    public void realizarPago(Callback callback) {
 
-        System.out.println("Pago realizado con Visa.");
     }
 
     @Override

@@ -30,21 +30,21 @@ public class TiendaZapatos {
             case 1:
                 System.out.println("Introduce tu usuario de Paypal:");
                 String userPaypal = sc.nextLine();
-                pasarelaPago.procesarPago(new Paypal(userPaypal));
+                pasarelaPago.procesarPago(new Paypal(userPaypal), detalle -> System.out.println("Pago realizado con Paypal."));
                 break;
 
             case 2:
-                System.out.println("Introduce tu usuario de Paypal:");
+                System.out.println("Introduce tu número de targeta:");
                 int numeroTargeta = sc.nextInt();
                 sc.nextLine();
-                pasarelaPago.procesarPago(new Visa(numeroTargeta));
+                pasarelaPago.procesarPago(new Visa(numeroTargeta), detalle -> System.out.println("Pago realizado con Visa."));
                 break;
 
             case 3:
                 System.out.println("Introduce tu numero de cuenta bancaria.");
                 int numeroCuenta = sc.nextInt();
                 sc.nextLine();
-                pasarelaPago.procesarPago(new Cuenta(numeroCuenta));
+                pasarelaPago.procesarPago(new Cuenta(numeroCuenta), detalle -> System.out.println("Pago realizado con cargo en cuenta."));
                 break;
         }
 
