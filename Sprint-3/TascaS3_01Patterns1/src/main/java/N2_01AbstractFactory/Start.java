@@ -70,17 +70,15 @@ public class Start {
         switch (opcion){
 
             case 1:
-                crearContactoES();
+                crearContacto(new ESContactFactory());
                 break;
 
             case 2:
-                crearContactoUS();
+                crearContacto(new USContactFactory());
                 break;
         }
     }
-    public static void crearContactoES(){
-
-        ContactAbstractFactory factory = new ESContactFactory();
+    public static void crearContacto(ContactAbstractFactory factory){
 
         System.out.println("Dime tu nombre completo:");
         String name = sc.nextLine();
@@ -94,25 +92,6 @@ public class Start {
         System.out.println("Dirección: " + address.formattedAddress());
         System.out.println("Teléfono: " + phone.formattedPhone());
         System.out.println("Tus datos han sido agregados correctamente!");
-    }
-
-    public static void crearContactoUS(){
-
-        ContactAbstractFactory factory = new USContactFactory();
-
-        System.out.println("Type your full name:");
-        String name = sc.nextLine();
-        Address address = factory.createAddress();
-        Phone phone = factory.createPhone();
-
-        Contact contact = factory.createContact(name, address, phone);
-        contactList.add(contact);
-
-        System.out.println("Full name: " + name);
-        System.out.println("Address: " + address.formattedAddress());
-        System.out.println("Phone Number: " + phone.formattedPhone());
-        System.out.println("Your data was added successfully!");
-
     }
 
     public static Contact buscarContacto(){

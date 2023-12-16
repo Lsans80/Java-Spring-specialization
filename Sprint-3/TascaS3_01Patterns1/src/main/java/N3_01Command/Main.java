@@ -3,53 +3,36 @@ package N3_01Command;
 import N3_01Command.Orders.Accelerate;
 import N3_01Command.Orders.SlowDown;
 import N3_01Command.Orders.StartUp;
-import N3_01Command.Parking.Plane;
-import N3_01Command.Parking.Bicycle;
-import N3_01Command.Parking.Boat;
-import N3_01Command.Parking.Car;
+import N3_01Command.Orders.OrderVehicle;
+import N3_01Command.Parking.*;
 
 public class Main {
 
     public static void main (String [] args){
 
-        //Instancia clases.
-        Car car = new Car();
-        Bicycle bicycle = new Bicycle();
-        Plane plane = new Plane();
-        Boat boat = new Boat();
+        Vehicle car = new Car();
+        Vehicle bicycle = new Bicycle();
+        Vehicle plane = new Plane();
+        Vehicle boat = new Boat();
 
         //Instancia invoker class.
-        OrderVehicle order = new OrderVehicle();
+        OrderVehicle orders = new OrderVehicle();
 
-        //Se establece el comando para cada vehículo y se ejecuta.
-        order.setStartUp(new StartUp(car));
-        order.setAccelerate(new Accelerate(car));
-        order.setSlowDown(new SlowDown(car));
-        order.executeStartUp();
-        order.executeAccelerate();
-        order.executeSlowDown();
+        //Se establecen los comandos para cada vehículo y se ejecutan.
+        executeOrdersforVehicle(orders,car);
+        executeOrdersforVehicle(orders,bicycle);
+        executeOrdersforVehicle(orders,plane);
+        executeOrdersforVehicle(orders,boat);
+    }
 
-        order.setStartUp(new StartUp(bicycle));
-        order.setAccelerate(new Accelerate(bicycle));
-        order.setSlowDown(new SlowDown(bicycle));
-        order.executeStartUp();
-        order.executeAccelerate();
-        order.executeSlowDown();
+    public static void executeOrdersforVehicle(OrderVehicle orders, Vehicle vehicle){
 
-        order.setStartUp(new StartUp(boat));
-        order.setAccelerate(new Accelerate(boat));
-        order.setSlowDown(new SlowDown(boat));
-        order.executeStartUp();
-        order.executeAccelerate();
-        order.executeSlowDown();
+        orders.setStartUp(new StartUp(vehicle));
+        orders.setAccelerate(new Accelerate(vehicle));
+        orders.setSlowDown(new SlowDown(vehicle));
 
-        order.setStartUp(new StartUp(plane));
-        order.setAccelerate(new Accelerate(plane));
-        order.setSlowDown(new SlowDown(plane));
-        order.executeStartUp();
-        order.executeAccelerate();
-        order.executeSlowDown();
-
-
+        orders.executeStartUp();
+        orders.executeAccelerate();
+        orders.executeSlowDown();
     }
 }
