@@ -3,7 +3,7 @@ En este Sprint encontraremos ejercicios para introducirnos en el framework SPRIN
 Utilizaremos el protocolo HTTP, a usar Postman, y a descubrir cómo gestionar dependencias con Maven y Gradle.
 
 
-## Nivel 1
+# Nivel 1
 
 - Ejercicio Spring y Maven
  
@@ -90,7 +90,7 @@ Deberá responder a:
 http://localhost:9000/HelloWorld2
 http://localhost:9000/HelloWorld2/mi nombre
 
-## Nivel 2
+# Nivel 2
 
 - Ejercicio Spring y Gradle
 
@@ -179,7 +179,7 @@ Deberá responder a:
 http://localhost:9001/HelloWorld2
 http://localhost:9001/HelloWorld2/mi nombre
 
-## Nivel 3
+# Nivel 3
 
 - Ejercicio Postman
 
