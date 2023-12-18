@@ -1,6 +1,7 @@
 # TascaS3_02Patterns2
 
-En este Sprint vamos a profundizar en los patrones de construcción de software.
+La utilización de patrones es fundamental en la construcción de un software extensible y reutilizable. 
+El lenguaje Java, así como todos los frameworks de software, están hechos de acuerdo a los patrones más importantes del software.
 
 ## Nivel 1
 
