@@ -70,6 +70,7 @@ Dependiendo del package principal, crea otro subpackage llamado Controllers, y e
 
 #### Tendrá que tener dos métodos:
 String saluda
+
 String saluda2
 
 #### Estos dos métodos recibirán un parámetro String llamado nombre, y devolverán la frase:
