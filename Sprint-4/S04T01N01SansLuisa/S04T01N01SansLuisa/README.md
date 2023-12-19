@@ -1,7 +1,13 @@
+# Objetivos de este Sprint:
+
+- Protocolo HTTP
+- Primer contacto con Spring
+- Gestores de dependencias (Maven/Gradle)
+- Postman
+
 En este Sprint encontraremos ejercicios para introducirnos en el framework SPRING.
 
 Utilizaremos el protocolo HTTP, a usar Postman, y a descubrir cómo gestionar dependencias con Maven y Gradle.
-
 
 # Nivel 1
 
