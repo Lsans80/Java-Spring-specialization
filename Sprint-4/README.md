@@ -216,8 +216,12 @@ Ejecuta desde Eclipse / IntelliJ los proyectos creados en los dos niveles anteri
 
 Tendrás que entregar dos capturas de pantalla, una por la ejecución de cada entorno, y dos archivos con formato JSON, con los entornos exportados.
 
-## Recursos utilizados:
+## Recursos adicionales utilizados:
 
-•	Youtube. Spring initializr desde Intellij IDEA, 2023, https://www.youtube.com/watch?v=RojoJvq6Rzg. Consultado el 6 de Diciembre de 2023.
+•	Code Lab. Youtube. Spring initializr desde Intellij IDEA, 2023, https://www.youtube.com/watch?v=RojoJvq6Rzg. Consultado el 6 de Diciembre de 2023.
 
-•	YouTube. CURSO FULL STACK MICROSERVICIOS CON SPRING BOOT Y ANGULAR PARA PRINCIPIANTES (2024), 2023, https://www.youtube.com/watch?v=zQNnjXBQWqY&list=PLjYc2qKaQy0S-MPXQU_BDeqLIGJVXtsq9. Consultado el 10 de Diciembre de 2023.
+•	ZafiroDev. YouTube. CURSO FULL STACK MICROSERVICIOS CON SPRING BOOT Y ANGULAR PARA PRINCIPIANTES (2024), 2023, https://www.youtube.com/watch?v=zQNnjXBQWqY&list=PLjYc2qKaQy0S-MPXQU_BDeqLIGJVXtsq9. Consultado el 10 de Diciembre de 2023.
+
+•	Mesa, Julián. YouTube. Tutorial básico de Postman. YouTube, 2020, https://www.youtube.com/playlist?list=PLeo6Q1inqlOeC_zQMg2i3aZcGF_Jmyqd4. Consultado el 19 de Diciembre de 2023.
+
+•	Ravikanth FicusRoot - Tech Videos. YouTube. Postman Beginners Tutorials and Lessons, 2022, https://www.youtube.com/playlist?list=PLkLerKPSoQ_PbkN7Yz1SDliR2bRb4o_7f. Consultado el 19 de Diciembre de 2023.
