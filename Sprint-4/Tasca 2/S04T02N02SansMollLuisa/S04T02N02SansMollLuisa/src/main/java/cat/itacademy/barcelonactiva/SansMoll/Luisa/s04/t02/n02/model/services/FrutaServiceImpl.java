@@ -1,7 +1,7 @@
-package cat.itacademy.barcelonactiva.SansMoll.Luisa.s04.t02.n01.model.services;
+package cat.itacademy.barcelonactiva.SansMoll.Luisa.s04.t02.n02.model.services;
 
-import cat.itacademy.barcelonactiva.SansMoll.Luisa.s04.t02.n01.model.domain.Fruta;
-import cat.itacademy.barcelonactiva.SansMoll.Luisa.s04.t02.n01.model.repository.FrutaRepository;
+import cat.itacademy.barcelonactiva.SansMoll.Luisa.s04.t02.n02.model.domain.Fruta;
+import cat.itacademy.barcelonactiva.SansMoll.Luisa.s04.t02.n02.model.repository.FrutaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -46,6 +46,13 @@ public class FrutaServiceImpl implements FrutaService{
 
     @Override
     public void deleteFrutabyId(int id) {
-        frutaRepository.deleteById(id);
+        Optional<Fruta> frutaBuscada = frutaRepository.findById(id);
+
+        if (frutaBuscada == null){
+            System.out.println("La fruta no se ha encontrado.");
+
+        } else {
+            frutaRepository.deleteById(id);
+        }
     }
 }
