@@ -3,7 +3,7 @@
 - HTTP Verbs.
 - HTTP Headers.
 - HTTP Status Codes.
-- CRUD amb Spring boot.
+- CRUD con Spring boot.
 - H2, MySQL, MongoDB.
 
 En este Sprint encontraremos ejercicios para introducirnos en el framework SPRING.
