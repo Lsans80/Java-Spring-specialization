@@ -1,9 +1,10 @@
 # Objetivos de este Sprint:
 
-- Protocolo HTTP
-- Primer contacto con Spring
-- Gestores de dependencias (Maven/Gradle)
-- Postman
+- HTTP Verbs.
+- HTTP Headers.
+- HTTP Status Codes.
+- CRUD amb Spring boot.
+- H2, MySQL, MongoDB.
 
 En este Sprint encontraremos ejercicios para introducirnos en el framework SPRING.
 
