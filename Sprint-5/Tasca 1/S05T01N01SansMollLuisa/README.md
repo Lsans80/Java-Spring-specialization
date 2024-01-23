@@ -18,9 +18,7 @@ Aprenderás a usar correctamente los verbos HTTP y gestionar los códigos de res
 
 https://www.loom.com/share/8e27fdaf07b740439f548a9ac88802dd?sid=0b1aa918-d3e6-4bd1-8d71-362c262e0a0b
 
-
-
-- Exercici aplicació Web CRUD amb MySQL.
+- Exercicio aplicación Web CRUD con MySQL.
   
 Accede a la página ->https://start.spring.io/, y genera un proyecto Spring boot con las siguientes características:
 
