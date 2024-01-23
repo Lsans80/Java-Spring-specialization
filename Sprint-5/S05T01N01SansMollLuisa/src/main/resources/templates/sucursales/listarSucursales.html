@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Sucursales</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            padding: 8px 12px;
+            display: inline-block;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .editar-btn {
+            background-color: #3498db;
+        }
+
+        .eliminar-btn {
+            background-color: #e74c3c;
+            cursor: pointer;
+        }
+
+        .agregar-btn {
+            background-color: #27ae60;
+        }
+    </style>
+    <script>
+        function confirmarBorrado(pk_SucursalID) {
+            var confirmacion = confirm("¿Estás seguro de que deseas borrar esta sucursal?");
+
+            if (confirmacion) {
+                window.location.href = "/sucursales/eliminar/" + pk_SucursalID;
+            }
+        }
+    </script>
+</head>
+<body>
+<h2>Sucursales</h2>
+
+<table>
+    <thead>
+    <tr>
+        <th>Nombre</th>
+        <th>País</th>
+        <th>EU - Fuera EU</th>
+        <th>Acciones</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="sucursal : ${sucursales}">
+        <td th:text="${sucursal.nombreSucursal}"></td>
+        <td th:text="${sucursal.paisSucursal}"></td>
+        <td th:text="${sucursal.tipoSucursal}"></td>
+        <td>
+            <!-- Enlaces o botones para editar y borrar -->
+            <a class="editar-btn" th:href="@{/sucursales/editar/{id}(id=${sucursal.pk_SucursalID})}">Editar</a>
+            |
+            <a class="eliminar-btn" th:attr="data-sucursalid=${sucursal.pk_SucursalID}" onclick="confirmarBorrado(this.getAttribute('data-sucursalid'))">Borrar</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<!-- Enlace para agregar nueva sucursal -->
+<a class="agregar-btn" th:href="@{/sucursales/agregar}">Agregar Sucursal</a>
+
+</body>
+</html>
