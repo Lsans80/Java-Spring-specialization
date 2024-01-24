@@ -14,7 +14,7 @@ Aprenderás a usar correctamente los verbos HTTP y gestionar los códigos de res
 
 # Nivel 1
 
-### Vídeo del ejercicio resuelto de Sucursales
+### Vídeo de la vista del ejercicio de Sucursales
 
 https://www.loom.com/share/8e27fdaf07b740439f548a9ac88802dd?sid=0b1aa918-d3e6-4bd1-8d71-362c262e0a0b
 
