@@ -2,7 +2,7 @@
 
 ## Bootcamp by IT-Academy-BCN.
 
-## Mentor: Romina Domingo.
+## Mentora: Romina Domingo.
  
 Java se diseñó inicialmente como lenguaje para electrodomésticos... hasta que llegó a convertirse en el lenguaje de programación más potente y maduro en el servidor.
 
