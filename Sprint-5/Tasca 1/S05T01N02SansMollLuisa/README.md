@@ -138,4 +138,6 @@ Además del enlace a Git de la tarea resuelta, deberás incluir al menos dos enl
 
 - SpringDeveloper. YouTube. Spring Tips: Spring Data JDBC, 5 Marzo 2022, https://www.youtube.com/watch?v=C4YBv40Gvnk&t=1662s. Consultado el 3 de Enero de 2024.
   
-- SACAViX Tech. YouTube. Spring Boot 3 + Swagger: Documentando una API REST desde cero, 7 Marzo 2023, https://www.youtube.com/watch?v=C4YBv40Gvnk&t=1662s. Consultado el 26 de Enero de 2024.
+- SACAViX Tech. YouTube. Spring Boot 3 + Swagger: Documentando una API REST desde cero, 7 Marzo 2023, https://www.youtube.com/watch?v=-SzKqwgPTyk. Consultado el 26 de Enero de 2024.
+  
+- Random code. YouTube. How to Call a REST API using WebClient in Spring Boot, 7 Marzo 2023, https://www.youtube.com/watch?v=RHZgllzbjVQ. Consultado el 28 de Enero de 2024.
