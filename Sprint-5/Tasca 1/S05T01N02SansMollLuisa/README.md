@@ -4,7 +4,7 @@
 - JPA.
 - CRUD amb Spring.
 - MySQL.
-- Thymeleaf.
+- Swagger.
 
 En este Sprint encontraremos ejercicios para introducirnos en el framework SPRING.
 
