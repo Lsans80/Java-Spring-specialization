@@ -12,7 +12,7 @@ En esta tarea realizarás un CRUD (Create, Read, Update, Delete) con 3 bases de 
 
 Aprenderás a usar correctamente los verbos HTTP y gestionar los códigos de respuesta.
 
-# Nivel 1
+# Nivel 2 Swagger
 
 - Exercicio aplicación Web CRUD con MySQL.
   
@@ -83,14 +83,14 @@ Tenemos una entidad llamada FlorEntity, que dispone de las siguientes propiedade
  
 También tenemos una DTO llamada FlorDTO, que tendrá las mismas propiedades que la entidad Flor, añadiendo una:
 
-- String tipoSucursal.
+- String tipoFlor.
 
 
-Esta propiedad, en función del país de la sucursal, deberá indicar si es “UE” o “Fuera UE”. Para ello puedes tener una lista privada en la misma DTO (por ejemplo: List<String> países), con los países que forman parte de la UE.
+Esta propiedad, en función del país de la flor, deberá indicar si es “UE” o “Fuera UE”. Para ello puedes tener una lista privada en la misma DTO (por ejemplo: List<String> países), con los países que forman parte de la UE.
 
 Aprovechando la especificación JPA, deberás persistir a la entidad Sucursal en una base de datos MySql, siguiendo el patrón MVC.
 
-El consejo es que SucursalDTO la utilices en el Controller y la Vista, y Sucursal en el Repository. La capa de servicios será la encargada de realizar la traducción entre ambas.
+El consejo es que FlorDTO la utilices en el Controller y la Vista, y FlorEntity en el Repository. La capa de servicios será la encargada de realizar la traducción entre ambas.
 
 
 Para ello, dependiendo del package principal, crearás una estructura de packages, donde ubicarás las clases que necesites:
@@ -106,24 +106,27 @@ Para ello, dependiendo del package principal, crearás una estructura de package
 - cat.itacademy.barcelonactiva.apellidos.nombre.s05.t01.n01.model.repository
 
 
-La clase ubicada en el paquete controllers (SucursalController, por ejemplo), deberá ser capaz de dar respuesta a las siguientes peticiones para actualizar y consultar información:
-
-http://localhost:9000/sucursal/add
-
-http://localhost:9000/sucursal/update
-
-http://localhost:9000/sucursal/delete/{id}
-
-http://localhost:9000/sucursal/getOne/{id}
-
-http://localhost:9000/sucursal/getAll
+La clase ubicada en el paquete controllers (FlorController, por ejemplo), deberá ser capaz de dar respuesta a las siguientes peticiones para actualizar y consultar información:
 
 
-Como puedes ver, en el archivo application.properties, deberás configurar que el puerto a utilizar sea el 9000.
+http://localhost:9001/flor/add
 
-La vista deberá estar desarrollada con Thymeleaf.
+http://localhost:9001/flor/update
 
-Para que sea más atractiva, puedes usar opcionalmente alguna librería CSS que te lo facilite, como bootstrap, tailwind, material, etc.
+http://localhost:9001/flor/delete/{id}
+
+http://localhost:9001/flor/getOne/{id}
+
+http://localhost:9001/flor/getAll
+
+
+Como puedes ver, en el archivo application.properties, deberás configurar que el puerto a utilizar sea el 9001.
+
+#### Importante
+
+Tendrás que tener en cuenta las buenas prácticas de diseño de las API, utilizando correctamente los códigos de error y las respuestas en caso de invocaciones incorrectas. (Puedes consultar información sobre ResponseEntity).
+
+Tienes que incluir swagger para que cualquier desarrollador/a pueda tener una idea rápida de los recursos de que dispone la API.
 
 #### Muy Importante
 
@@ -134,3 +137,5 @@ Además del enlace a Git de la tarea resuelta, deberás incluir al menos dos enl
 ## Recursos adicionales utilizados:
 
 - SpringDeveloper. YouTube. Spring Tips: Spring Data JDBC, 5 Marzo 2022, https://www.youtube.com/watch?v=C4YBv40Gvnk&t=1662s. Consultado el 3 de Enero de 2024.
+  
+- SACAViX Tech. YouTube. Spring Boot 3 + Swagger: Documentando una API REST desde cero, 7 Marzo 2023, https://www.youtube.com/watch?v=C4YBv40Gvnk&t=1662s. Consultado el 26 de Enero de 2024.
