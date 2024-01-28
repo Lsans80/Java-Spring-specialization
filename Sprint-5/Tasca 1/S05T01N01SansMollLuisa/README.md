@@ -12,7 +12,7 @@ En esta tarea realizarás un CRUD (Create, Read, Update, Delete) con 3 bases de 
 
 Aprenderás a usar correctamente los verbos HTTP y gestionar los códigos de respuesta.
 
-# Nivel 1
+# Nivel 1 Thymeleaf
 
 ### Vídeo de la vista del ejercicio de Sucursales
 
