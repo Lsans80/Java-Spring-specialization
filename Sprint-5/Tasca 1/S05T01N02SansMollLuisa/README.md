@@ -136,7 +136,7 @@ Además del enlace a Git de la tarea resuelta, deberás incluir al menos dos enl
 
 ## Recursos adicionales utilizados:
 
-- SpringDeveloper. YouTube. Spring Tips: Spring Data JDBC, 5 Marzo 2022, https://www.youtube.com/watch?v=C4YBv40Gvnk&t=1662s. Consultado el 3 de Enero de 2024.
+- SpringDeveloper. YouTube. Spring Tips: Spring Data JDBC, 5 Marzo 2022, https://www.youtube.com/watch?v=srBYXhhLVV4. Consultado el 3 de Enero de 2024.
   
 - SACAViX Tech. YouTube. Spring Boot 3 + Swagger: Documentando una API REST desde cero, 7 Marzo 2023, https://www.youtube.com/watch?v=-SzKqwgPTyk. Consultado el 26 de Enero de 2024.
   
