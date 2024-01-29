@@ -8,15 +8,11 @@ import java.util.List;
 import java.util.Locale;
 
 public class FlorDTO {
-
-
     private int pk_FlorID;
-
     @NotEmpty(message = "El nombre no puede estar vacío.")
     private String nombreFlor;
     @NotEmpty(message = "El nombre no puede estar vacío.")
     private String paisFlor;
-
     private String tipoFlor;
 
     private static final List<String> PAISES_EU = Arrays.asList("Alemania", "Austria", "Bélgica", "Bulgaria",
