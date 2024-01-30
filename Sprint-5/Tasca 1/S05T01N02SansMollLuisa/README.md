@@ -141,3 +141,9 @@ Además del enlace a Git de la tarea resuelta, deberás incluir al menos dos enl
 - SACAViX Tech. YouTube. Spring Boot 3 + Swagger: Documentando una API REST desde cero, 7 Marzo 2023, https://www.youtube.com/watch?v=-SzKqwgPTyk. Consultado el 26 de Enero de 2024.
   
 - Random code. YouTube. How to Call a REST API using WebClient in Spring Boot, 7 Marzo 2023, https://www.youtube.com/watch?v=RHZgllzbjVQ. Consultado el 28 de Enero de 2024.
+
+- Like a Shark. YouTube.Manejo avanzado de excepciones con Spring boot, 22 sept 2021, https://www.youtube.com/watch?v=GfIL78RxEx8&t=115s. Consultado el 29 de Enero del 2024.
+  
+- SACAViX Tech. YouTube. Spring Boot 3 + Swagger: Documentando una API REST desde cero, 7 Marzo 2023, https://www.youtube.com/watch?v=-SzKqwgPTyk. Consultado el 26 de Enero de 2024.
+  
+- Random code. YouTube. How to Call a REST API using WebClient in Spring Boot, 7 Marzo 2023, https://www.youtube.com/watch?v=RHZgllzbjVQ. Consultado el 28 de Enero de 2024.
