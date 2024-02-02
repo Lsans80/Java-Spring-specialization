@@ -41,6 +41,7 @@ public class FlorController {
         FlorDTO florUpdate = florService.updateFlor(id, nuevaFlorDTO);;
         return new ResponseEntity<>(florUpdate, HttpStatus.OK);
     }
+
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> deleteSucursal(@PathVariable int id) {
         florService.deleteById(id);

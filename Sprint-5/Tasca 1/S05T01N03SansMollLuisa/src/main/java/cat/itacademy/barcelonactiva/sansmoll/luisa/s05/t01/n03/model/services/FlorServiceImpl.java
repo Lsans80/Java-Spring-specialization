@@ -71,7 +71,6 @@ public class FlorServiceImpl implements FlorService {
         } catch (RuntimeException e)  {
             throw new RuntimeException("Error al buscar la flor. Código de error: " + e.getMessage(), e);
         }
-
     }
 
     @Override
@@ -92,7 +91,6 @@ public class FlorServiceImpl implements FlorService {
         } catch (RuntimeException e)  {
             throw new RuntimeException("Error al buscar la lista. Código de error: " + e.getMessage(), e);
         }
-
 
     }
 
@@ -122,12 +120,12 @@ public class FlorServiceImpl implements FlorService {
     public void deleteById(int idFlor) {
 
         try {
-
             webClient.delete()
                     .uri("/flor/delete/{id}", idFlor)
                     .retrieve()
                     .toBodilessEntity()
                     .block();
+
         } catch (WebClientResponseException e){
             String mensajeError = e.getResponseBodyAsString();
             throw new RuntimeException("Error al buscar la flor. Detalles: " + e.getRawStatusCode() + " " + mensajeError, e);
