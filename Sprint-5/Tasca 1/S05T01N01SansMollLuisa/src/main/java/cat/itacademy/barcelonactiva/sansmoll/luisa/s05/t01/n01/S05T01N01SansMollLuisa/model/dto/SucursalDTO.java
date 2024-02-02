@@ -1,8 +1,6 @@
 package cat.itacademy.barcelonactiva.sansmoll.luisa.s05.t01.n01.S05T01N01SansMollLuisa.model.dto;
 
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.NotNull;
 
 import java.text.Collator;
 import java.util.Arrays;
@@ -17,7 +15,6 @@ public class SucursalDTO {
     @NotEmpty(message = "El país no puede estar vacío.")
     private String paisSucursal;
     private String tipoSucursal;
-
     private static final List<String> PAISES_EU = Arrays.asList("Alemania", "Austria", "Bélgica", "Bulgaria",
             "Chipre", "Croacia", "Dinamarca", "Eslovaquia", "Eslovenia", "España", "Estonia", "Finlandia", "Francia",
             "Grecia", "Hungría", "Irlanda", "Italia", "Letonia", "Lituania", "Luxemburgo", "Malta", "Países Bajos",

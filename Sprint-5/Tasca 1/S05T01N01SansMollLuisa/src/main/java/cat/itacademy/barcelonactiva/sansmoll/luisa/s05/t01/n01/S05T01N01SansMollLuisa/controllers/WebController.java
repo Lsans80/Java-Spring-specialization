@@ -7,9 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Arrays;
 import java.util.List;
 
 @Controller
@@ -24,6 +24,29 @@ public class WebController {
         List<SucursalDTO> sucursales = sucursalService.getAllSucursales();
         model.addAttribute("sucursales", sucursales);
         return "sucursales/listarSucursales";
+    }
+    @GetMapping("/buscar/{id}")
+    public String buscarSucursalPorId(@RequestParam("id") String id, Model model) {
+
+        try {
+            int idSucursal = Integer.parseInt(id);
+            SucursalDTO sucursalDTO = sucursalService.getOneSucursal(idSucursal);
+
+            if (sucursalDTO != null) {
+                model.addAttribute("sucursales", Arrays.asList(sucursalDTO));
+                return "sucursales/listarSucursales";
+            } else {
+                model.addAttribute("mensaje", "No se encontró ninguna sucursal con el ID proporcionado.");
+                return "sucursales/listarSucursales";
+            }
+
+        } catch (NumberFormatException e) {
+            model.addAttribute("mensaje", "Por favor, proporciona un ID válido.");
+            return "redirect:/sucursales/";
+        } catch (Exception e) {
+            model.addAttribute("mensaje", "Error al buscar la sucursal. " + e.getMessage());
+            return "redirect:/sucursales/";
+        }
     }
 
     @GetMapping("/agregar")

@@ -58,16 +58,6 @@
 <body>
 <h2>Agregar Sucursal</h2>
 
-<div th:if="${#fields.hasErrors('sucursalDTO')}">
-    <div class="alert alert-danger" role="alert">
-        <p>Por favor, corrige los siguientes errores:</p>
-        <ul>
-            <li th:each="error : ${#fields.errors('sucursalDTO')}" th:text="${error}"></li>
-        </ul>
-    </div>
-</div>
-
-
 <form th:action="@{/sucursales/agregar}" th:object="${sucursalDTO}" method="post">
     <!-- Campos del formulario -->
     <label>Nombre:</label>

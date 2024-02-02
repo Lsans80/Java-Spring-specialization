@@ -1,6 +1,7 @@
 package cat.itacademy.barcelonactiva.sansmoll.luisa.s05.t01.n01.S05T01N01SansMollLuisa.model.domain;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
 
 @Entity
@@ -9,9 +10,9 @@ public class Sucursal {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int pk_SucursalID;
-    @NotEmpty(message = "El nombre de la sucursal no puede estar vacío.")
+    //@NotEmpty(message = "El nombre de la sucursal no puede estar vacío.")
     private String nombreSucursal;
-    @NotEmpty(message = "El nombre de la sucursal no puede estar vacío.")
+    //@NotEmpty(message = "El nombre de la sucursal no puede estar vacío.")
     private String paisSucursal;
 
     public Sucursal(int pk_SucursalID, String nombreSucursal, String paisSucursal) {

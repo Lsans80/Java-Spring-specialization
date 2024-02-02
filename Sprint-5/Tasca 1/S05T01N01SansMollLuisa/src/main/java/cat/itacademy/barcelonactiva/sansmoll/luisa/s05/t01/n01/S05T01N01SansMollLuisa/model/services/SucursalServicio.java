@@ -10,9 +10,7 @@ public interface SucursalServicio {
     SucursalDTO getOneSucursal (Integer idSucursal);
     SucursalDTO getOneSucursal (String nombreSucursal);
     List<SucursalDTO> getAllSucursales();
-
     SucursalDTO updateSucural(int id, SucursalDTO sucursalDTO);
-
     void deleteById(Integer idSucursal);
     void deleteByNombre (String nombreSucursal);
 }
