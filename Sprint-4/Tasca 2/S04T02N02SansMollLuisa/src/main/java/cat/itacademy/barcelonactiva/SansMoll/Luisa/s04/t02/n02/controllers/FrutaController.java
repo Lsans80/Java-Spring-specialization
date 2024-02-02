@@ -17,6 +17,7 @@ public class FrutaController {
     @Autowired//Genera una instancia.
     private FrutaService frutaService;
 
+    //Si la fruta existe agrega los kilos directamente.
     @PostMapping("/add")
     public ResponseEntity<?> addFruta (@RequestBody Fruta fruta){
 
