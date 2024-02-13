@@ -21,30 +21,39 @@ El software debe respetar los principales patrones de diseño.
 
 Tienes que tener en cuenta los siguientes detalles de construcción:
 
-# URL's:
+### URL's:
 
 POST: /players: crea un jugador/a.
+
 PUT /players: modifica el nombre del jugador/a.
+
 POST /players/{id}/games/ : un jugador/a específico realiza un tirón de los dados.
+
 DELETE /players/{id}/games: elimina las tiradas del jugador/a.
+
 GET /players/: devuelve el listado de todos los jugadores/as del sistema con su porcentaje medio de éxitos.
+
 GET /players/{id}/games: devuelve el listado de jugadas por un jugador/a.
+
 GET /players/ranking: devuelve el ranking medio de todos los jugadores/as del sistema. Es decir, el porcentaje medio de logros.
+
 GET /players/ranking/loser: devuelve al jugador/a con peor porcentaje de éxito.
+
 GET /players/ranking/winner: devuelve al jugador con peor porcentaje de éxito.
 
-# Fase 1
+### Fase 1
 Persistencia: utiliza como base de datos MySQL.
 
-# Fase 2
+### Fase 2
 Cambia todo lo que necesites y utiliza MongoDB para persistir los datos.
 
-# Fase 3
+### Fase 3
 Añade seguridad: incluye autenticación por JWT en todos los accesos a las URL's del microservicio.
 
-##Nivel 2
+# Nivel 2
 
 Añade tests unitarios, de componente y de integración al proyecto con librerías jUnit, AssertJ o Hamcrest.
+
 Añade Mocks al testing del proyecto (Mockito) y Contract Tests (https://docs.pact.io/)
 
 ## Recursos utilizados:
