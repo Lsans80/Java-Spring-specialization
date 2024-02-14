@@ -10,7 +10,7 @@ import cat.itacademy.barcelonactiva.cognoms.nom.s05.t02.n01.f3.S05T02N01F3SansMo
 import cat.itacademy.barcelonactiva.cognoms.nom.s05.t02.n01.f3.S05T02N01F3SansMollLuisa.model.repository.PlayerRepository;
 import cat.itacademy.barcelonactiva.cognoms.nom.s05.t02.n01.f3.S05T02N01F3SansMollLuisa.model.repository.UserRepository;
 import cat.itacademy.barcelonactiva.cognoms.nom.s05.t02.n01.f3.S05T02N01F3SansMollLuisa.model.services.interfaces.PlayerService;
-import cat.itacademy.barcelonactiva.cognoms.nom.s05.t02.n01.f3.S05T02N01F3SansMollLuisa.model.utils.PlayerConverter;
+import cat.itacademy.barcelonactiva.cognoms.nom.s05.t02.n01.f3.S05T02N01F3SansMollLuisa.model.converter.PlayerConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,7 +28,7 @@ public class PlayerServiceImpl implements PlayerService {
 
     @Override
     public PlayerDTO addPlayer(PlayerDTO playerDTO, String username) {
-        User user = userRepository.findUserByName(username) //TODO se debe hacer esta comprobación?
+        User user = userRepository.findUserByName(username)
                 .orElseThrow(() -> new UserNotFound("User not found: " + username));
 
         if (playerDTO.getName() == null || playerDTO.getName().isBlank() || playerDTO.getName().equalsIgnoreCase("Unknown")){
@@ -36,7 +36,6 @@ public class PlayerServiceImpl implements PlayerService {
         } else if(playerRepository.existsByNameIgnoreCase(playerDTO.getName())) {
             throw new PlayerAlreadyExists("Ups! Player already exists.");
         }
-
         return setNewPlayer(playerDTO, user);
     }
 

@@ -7,9 +7,8 @@ import cat.itacademy.barcelonactiva.cognoms.nom.s05.t02.n01.f3.S05T02N01F3SansMo
 import cat.itacademy.barcelonactiva.cognoms.nom.s05.t02.n01.f3.S05T02N01F3SansMollLuisa.model.dto.GameDTO;
 import cat.itacademy.barcelonactiva.cognoms.nom.s05.t02.n01.f3.S05T02N01F3SansMollLuisa.model.repository.GameRepository;
 import cat.itacademy.barcelonactiva.cognoms.nom.s05.t02.n01.f3.S05T02N01F3SansMollLuisa.model.repository.PlayerRepository;
-import cat.itacademy.barcelonactiva.cognoms.nom.s05.t02.n01.f3.S05T02N01F3SansMollLuisa.model.repository.UserRepository;
 import cat.itacademy.barcelonactiva.cognoms.nom.s05.t02.n01.f3.S05T02N01F3SansMollLuisa.model.services.interfaces.GameService;
-import cat.itacademy.barcelonactiva.cognoms.nom.s05.t02.n01.f3.S05T02N01F3SansMollLuisa.model.utils.GameConverter;
+import cat.itacademy.barcelonactiva.cognoms.nom.s05.t02.n01.f3.S05T02N01F3SansMollLuisa.model.converter.GameConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -27,8 +26,6 @@ public class GameServiceImpl implements GameService {
     @Autowired
     private PlayerServiceImpl playerService;
     @Autowired
-    private UserRepository userRepository;
-    @Autowired
     private PlayerRepository playerRepository;
 
     @Transactional //Makes sure all the requests are successful.
@@ -37,7 +34,7 @@ public class GameServiceImpl implements GameService {
         long userid = playerService.findUserById(username);
         Player player = playerRepository.findByUser_UserIdAndPlayerId(userid, playerId);
         if(player == null){
-            throw new PlayerNotFound("You do not have any user with this ID.");
+            throw new PlayerNotFound("You do not have any player with this ID.");
         }
 
         Game newGame = new Game();
@@ -64,22 +61,29 @@ public class GameServiceImpl implements GameService {
     public List<GameDTO> getAllGames(long playerId, String username) {
         long userid= playerService.findUserById(username);
         Player player = playerRepository.findByUser_UserIdAndPlayerId(userid,playerId);
+        if(player == null){
+            throw new PlayerNotFound("You do not have any player with this ID.");
+        }
+
         List<Game> games = gameRepository.findByPlayer_PlayerId(player.getPlayerId());
         if(games==null || games.isEmpty()){
-            throw new GameNotFound("There are no games for this player, sorry.");
+            throw new GameNotFound("There are no games for this player, Play!!.");
         }
         return games.stream().map(GameConverter::EntityToDTO).collect(Collectors.toList());
     }
     @Transactional
     public void deleteAllGames (long playerId, String username) {
-        Player player = playerService.findPlayerById(playerId);
-        List<Game> games = player.getGames();
+        long userid= playerService.findUserById(username);
+        Player player = playerRepository.findByUser_UserIdAndPlayerId(userid,playerId);
+        if(player == null){
+            throw new PlayerNotFound("You do not have any player with this ID.");
+        }
 
+        List<Game> games = player.getGames();
         if(games==null || games.isEmpty()){
             throw new GameNotFound("There are no games for this player, sorry.");
         }
         games.clear();
-        //gameRepository.deleteAll();//Delete all games with no reference to a player.
         gameRepository.deleteByPlayer_PlayerId(player.getPlayerId());
     }
 
